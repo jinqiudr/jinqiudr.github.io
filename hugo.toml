@@ -1,0 +1,7 @@
+baseURL = 'https://jinqiudr.github.io/'
+languageCode = 'zh-cn'
+title = '我的极客空间'
+theme = 'PaperMod'
+
+[params]
+    defaultTheme = "auto"
