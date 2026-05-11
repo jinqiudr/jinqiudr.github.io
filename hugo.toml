@@ -1,6 +1,6 @@
 baseURL = 'https://jinqiudr.github.io/'
 languageCode = 'zh-cn'
-title = '我的极客空间'
+title = "jinqiudr's Blog"
 theme = 'PaperMod'
 
 [params]
