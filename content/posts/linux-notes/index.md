@@ -1,8 +1,9 @@
 ---
-title: "Linux Notes"
+title: Linux Notes
 date: 2026-05-11T10:33:58+08:00
 draft: false
-tags: [Linux]
+tags:
+  - Linux
 categories: []
 description: ""
 ---
@@ -48,6 +49,13 @@ source ~/.bashrc
 修改sources.list.d/ubuntu.sources中的URIs即可
 
 ```bash
+# 备份原有源文件
+sudo cp /etc/apt/sources.list.d/ubuntu.sources /etc/apt/sources.list.d/ubuntu.sources.bak.$(date +%Y%m%d%H%M%S)
+
+# 编辑源文件
+sudo nano /etc/apt/sources.list.d/ubuntu.sources
+
+# 修改内容
 Types: deb
 URIs: http://mirrors.aliyun.com/ubuntu/
 Suites: noble noble-updates noble-backports
