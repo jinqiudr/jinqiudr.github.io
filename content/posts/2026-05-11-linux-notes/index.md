@@ -135,6 +135,21 @@ sudo apt install -y git
 
 # 看版本
 git --version
+
+# 查看当前配置的全局用户名
+git config --global user.name
+
+# 查看当前配置的全局用户邮箱
+git config --global user.email
+
+# 设置全局用户名（将 XXX 替换为你的真实名字或 GitHub 用户名）
+git config --global user.name "XXX"
+
+# 设置全局用户邮箱（将 XXX@XXX.com 替换为你的真实邮箱）
+git config --global user.email "XXX@XXX.com"
+
+# 查看当前所有的 Git 配置列表
+git config --list
 ```
 
 ### 2. VSCode 安装
