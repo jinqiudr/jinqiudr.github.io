@@ -91,7 +91,35 @@ fc-list :lang=zh | grep -i simsun
 - 现在的路径是 /home/用户名/.local/share/，属于当前用户私有目录
 - 在这里创建的 fonts 文件夹，只有当前用户能用，不会影响其他用户，也不需要管理员权限，是最安全的方式。
 
-### 4. 下载nvm
+## 三、环境安装
+
+### 1. Git
+
+```bash
+# Git 本身必须安装到全局系统
+sudo apt update
+sudo apt install -y git
+
+# 看版本
+git --version
+
+# 查看当前配置的全局用户名
+git config --global user.name
+
+# 查看当前配置的全局用户邮箱
+git config --global user.email
+
+# 设置全局用户名（将 XXX 替换为你的真实名字或 GitHub 用户名）
+git config --global user.name "XXX"
+
+# 设置全局用户邮箱（将 XXX@XXX.com 替换为你的真实邮箱）
+git config --global user.email "XXX@XXX.com"
+
+# 查看当前所有的 Git 配置列表
+git config --list
+```
+
+### 2. nvm
 
 ```bash
 # 从国内镜像克隆源码
@@ -124,35 +152,30 @@ source ~/.bashrc
 npm config set registry https://registry.npmmirror.com
 ```
 
-## 三、软件安装
-
-### 1. Git 安装
+### 3. Nginx
 
 ```bash
-# Git 本身必须安装到全局系统
+# 更新软件包列表
 sudo apt update
-sudo apt install -y git
 
-# 看版本
-git --version
+# 安装 Nginx
+sudo apt install nginx -y
 
-# 查看当前配置的全局用户名
-git config --global user.name
+# 启动并验证
+# Tips：打开浏览器并访问 http://localhost 或你的服务器 IP 地址。如果看到 "Welcome to nginx!" 的欢迎页面，说明安装成功。
+sudo systemctl status nginx
 
-# 查看当前配置的全局用户邮箱
-git config --global user.email
-
-# 设置全局用户名（将 XXX 替换为你的真实名字或 GitHub 用户名）
-git config --global user.name "XXX"
-
-# 设置全局用户邮箱（将 XXX@XXX.com 替换为你的真实邮箱）
-git config --global user.email "XXX@XXX.com"
-
-# 查看当前所有的 Git 配置列表
-git config --list
+# 停止 Nginx
+sudo systemctl stop nginx
 ```
 
-### 2. VSCode 安装
+启动后按 q 可退出状态信息界面，如果还需要验证 Nginx 是否在运行，有如下两种方法：
+1. 直接用浏览器访问：在浏览器里打开 http://localhost，依然能看到欢迎页面。
+2. 用命令行测试：在终端输入以下命令：`curl -I http://localhost`，如果返回的第一行是 `HTTP/1.1 200 OK`，并且里面有 `Server: nginx/...`，说明它活得很好。
+
+## 三、软件安装
+
+### 1. VSCode
 
 ```bash
 # 安装必要工具
@@ -171,14 +194,14 @@ sudo apt update
 sudo apt install -y code
 ```
 
-### 3. Chrome 安装
+### 2. Chrome
 
 ```bash
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install ./google-chrome-stable_current_amd64.deb
 ```
 
-### 4. 网易云安装
+### 3. 网易云
 
 ```bash
 # 安装Flatpak
@@ -192,7 +215,7 @@ flatpak install flathub com.github.gmg137.netease-cloud-music-gtk
 flatpak run com.github.gmg137.netease-cloud-music-gtk
 ```
 
-### 5. RustDesk 安装
+### 4. RustDesk
 
 ```bash
 wget https://github.com/rustdesk/rustdesk/releases/download/1.2.3/rustdesk-1.2.3-x86_64.deb
