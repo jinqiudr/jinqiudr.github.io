@@ -161,8 +161,11 @@ sudo apt update
 # 安装 Nginx
 sudo apt install nginx -y
 
-# 启动并验证
+# 启动 Nginx，并验证
 # Tips：打开浏览器并访问 http://localhost 或你的服务器 IP 地址。如果看到 "Welcome to nginx!" 的欢迎页面，说明安装成功。
+sudo systemctl start nginx
+
+# 查看状态
 sudo systemctl status nginx
 
 # 停止 Nginx
