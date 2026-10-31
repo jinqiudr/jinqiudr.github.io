@@ -1,7 +1,7 @@
 ---
 title: "从临床医学到医疗 AI：一段新的探索"
 date: 2026-10-31T23:05:54+08:00
-draft: true
+draft: false
 tags: 
     - 医疗 AI
     - 技术学习
