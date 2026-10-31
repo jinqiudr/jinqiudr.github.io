@@ -8,7 +8,6 @@ params:
   author: "金秋 · Qiu Jin"
   disableSpecial1stPost: true
   hideAuthor: true
-  ShowReadingTime: true
   ShowCodeCopyButtons: true
 
 markup:
