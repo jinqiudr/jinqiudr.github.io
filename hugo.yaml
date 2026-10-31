@@ -1,18 +1,56 @@
 baseURL: "https://jinqiudr.com/"
 languageCode: "zh-cn"
-title: "金秋的个人博客"
+title: "金秋 · Qiu Jin"
 theme: "PaperMod"
 
 params:
   defaultTheme: "auto"
-  author: "金秋"
+  author: "金秋 · Qiu Jin"
   disableSpecial1stPost: true
   hideAuthor: true
-  DateFormat: "2006年01月02日"
   ShowReadingTime: true
+  ShowCodeCopyButtons: true
 
 markup:
   highlight:
     noClasses: false
     lineNos: true
     lineNumbersInTable: true
+
+menus:
+  main:
+    - identifier: home
+      name: 首页
+      url: /
+      weight: 10
+
+    - identifier: archives
+      name: 归档
+      url: /archives/
+      weight: 20
+
+    - identifier: categories
+      name: 分类
+      url: /categories/
+      weight: 30
+
+    - identifier: tags
+      name: 标签
+      url: /tags/
+      weight: 40
+
+    - identifier: search
+      name: 搜索
+      url: /search/
+      weight: 50
+
+    - identifier: about
+      name: 关于
+      url: /about/
+      weight: 60
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON

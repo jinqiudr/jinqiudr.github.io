@@ -4,7 +4,8 @@ date: 2026-05-11T10:33:58+08:00
 draft: false
 tags:
   - Linux
-categories: []
+categories:
+  - Linux
 description: ""
 ---
 
