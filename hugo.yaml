@@ -1,0 +1,18 @@
+baseURL: "https://jinqiudr.com/"
+languageCode: "zh-cn"
+title: "金秋的个人博客"
+theme: "PaperMod"
+
+params:
+  defaultTheme: "auto"
+  author: "金秋"
+  disableSpecial1stPost: true
+  hideAuthor: true
+  DateFormat: "2006年01月02日"
+  ShowReadingTime: true
+
+markup:
+  highlight:
+    noClasses: false
+    lineNos: true
+    lineNumbersInTable: true
